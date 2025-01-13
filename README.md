@@ -35,26 +35,13 @@ cd CraftMyPlate-backend
 npm install
 ```
 
-### 3. Set Up Environment Variables
-Create a `.env` file in the root directory and include the following variables:
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-```
-
-### 4. Start the Server
-For development:
-```bash
-npm run dev
-```
 
 For production:
 ```bash
 npm start
 ```
 
-### 5. API Documentation
+### 3. API Documentation
 Access the API documentation at `http://localhost:5000/api-docs` (if Swagger is implemented).
 
 ## Folder Structure
