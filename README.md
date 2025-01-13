@@ -42,24 +42,21 @@ npm start
 ```
 
 ### 3. API Documentation
-Access the API documentation at `http://localhost:5000/api-docs` (if Swagger is implemented).
+Access the API documentation at `http://localhost:5000/` (if Swagger is implemented).
 
 ## Folder Structure
 ```
 CraftMyPlate-backend/
-├── controllers/    # Business logic for API endpoints
 ├── models/         # Mongoose schemas and models
-├── routes/         # API routes
+├── routes/         # API routes Business logic for API endpoints
 ├── middleware/     # Custom middleware (auth, error handling, etc.)
-├── config/         # Configuration files
-├── utils/          # Utility functions
 ├── .env            # Environment variables
 ├── server.js       # Entry point of the application
+├── db.js           # For Database Connection
 ```
 
 ## Scripts
 - `npm start`: Starts the production server.
-- `npm run dev`: Starts the server in development mode using nodemon.
 - `npm test`: Runs tests (if implemented).
 
 ## Contributing
@@ -75,8 +72,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 For any queries or issues, feel free to reach out:
-- **Email**: your-email@example.com
-- **GitHub**: [your-username](https://github.com/your-username)
+- **Email**: (`prayatansoni166@gmail.com`)
+- **GitHub**: (`https://github.com/PRAYATN-CODE`)
 
 ---
 
