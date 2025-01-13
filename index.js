@@ -1,60 +1,32 @@
-// const connectToMongo = require('./db');
-// const express = require('express');
-// const cors = require('cors'); // Import cors
-
-// // Connect to MongoDB
-// connectToMongo();
-
-// const app = express();
-// const port = 5000;
-
-// // Enable CORS for requests from localhost:3000
-// app.use(cors({ origin: 'http://localhost:3000' }));
-
-// // Middleware to parse JSON request bodies
-// app.use(express.json());
-
-// // Define routes
-// app.use('/api/auth', require('./routes/auth'));
-// app.use('/api/notes', require('./routes/notes'));
-
-// // Start server and log the port
-// app.listen(port, () => {
-//     console.log(`Server listening on http://localhost:${port}`);
-// });
-
 const connectToMongo = require('./db');
 const express = require('express');
 const cors = require('cors');
+const fetchuser = require('./middleware/fetchuser');
 
-// Connect to MongoDB
 connectToMongo();
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Enable CORS for localhost:3000 (development) and your Render URL (production)
 
-app.use(cors());  // Use CORS middleware globally
+app.use(cors());
 
-// Middleware to parse JSON request bodies
 app.use(express.json());
 
-// Define routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/notes', require('./routes/notes'));
+app.use('/', require('./routes/auth'));
+app.use('/', require('./routes/menuRoutes'))
+app.use('/', fetchuser, require('./routes/orderRoutes'))
 
-// Start server with error handling
+
 app.listen(port, (error) => {
     if (error) {
         console.error("Error starting server:", error);
-        process.exit(1); // Exit with status code 1 if there's an error
+        process.exit(1);
     } else {
         console.log(`Server listening on port: ${port}`);
     }
 });
 
-// Catch any unhandled errors or promise rejections
 process.on("uncaughtException", (err) => {
     console.error("Uncaught Exception:", err);
     process.exit(1);
