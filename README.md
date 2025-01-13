@@ -1,0 +1,96 @@
+# CraftMyPlate Backend
+
+Welcome to the **CraftMyPlate** backend repository. This project is designed to support the functionality of the CraftMyPlate application, providing robust APIs and seamless server-side operations.
+
+## Features
+- **User Management**: Secure user authentication and role-based authorization.
+- **Order Processing**: Efficient order creation, management, and tracking.
+- **Menu Management**: Dynamic menu handling, including categories and item details.
+- **Real-Time Notifications**: WebSocket-based notifications for order updates.
+- **Data Security**: Strong encryption and secure storage practices.
+
+## Tech Stack
+- **Node.js**: Server-side JavaScript runtime.
+- **Express.js**: Lightweight and flexible web framework.
+- **MongoDB**: NoSQL database for efficient data storage.
+- **Mongoose**: Elegant MongoDB object modeling for Node.js.
+- **JWT**: Secure authentication using JSON Web Tokens.
+
+## Prerequisites
+Ensure you have the following installed:
+- **Node.js** (v14 or later)
+- **npm** (v6 or later) or **yarn**
+- **MongoDB** (local or cloud instance)
+
+## Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/PRAYATN-CODE/CraftMyPlate-Backend.git
+cd CraftMyPlate-backend
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Set Up Environment Variables
+Create a `.env` file in the root directory and include the following variables:
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+
+### 4. Start the Server
+For development:
+```bash
+npm run dev
+```
+
+For production:
+```bash
+npm start
+```
+
+### 5. API Documentation
+Access the API documentation at `http://localhost:5000/api-docs` (if Swagger is implemented).
+
+## Folder Structure
+```
+CraftMyPlate-backend/
+├── controllers/    # Business logic for API endpoints
+├── models/         # Mongoose schemas and models
+├── routes/         # API routes
+├── middleware/     # Custom middleware (auth, error handling, etc.)
+├── config/         # Configuration files
+├── utils/          # Utility functions
+├── .env            # Environment variables
+├── server.js       # Entry point of the application
+```
+
+## Scripts
+- `npm start`: Starts the production server.
+- `npm run dev`: Starts the server in development mode using nodemon.
+- `npm test`: Runs tests (if implemented).
+
+## Contributing
+Contributions are welcome! Follow these steps:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m 'Add feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+For any queries or issues, feel free to reach out:
+- **Email**: your-email@example.com
+- **GitHub**: [your-username](https://github.com/your-username)
+
+---
+
+Happy coding! 🚀
